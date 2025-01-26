@@ -1,19 +1,16 @@
 plugins {
-    id 'java'
+	id 'java'
 }
 
 group = 'com.synapticloop'
-version = '1.0-SNAPSHOT'
+version = '1.0-0'
 
 repositories {
-    mavenCentral()
+	mavenCentral()
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-}
-
-test {
-    useJUnitPlatform()
+	implementation 'org.apache.solr:solr-solrj:9.6.1'
+	implementation 'org.apache.tika:tika-core:3.0.0'
+	implementation 'org.apache.tika:tika-parsers:3.0.0'
 }
