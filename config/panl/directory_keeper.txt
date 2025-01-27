@@ -1,2 +1,2 @@
-THis file is here to ensure that the ./config/panl directory gets committed to
+This file is here to ensure that the ./config/panl directory gets committed to
 git to preserve the project structure for the book walkthrough example.
