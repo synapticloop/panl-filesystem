@@ -1,4 +1,5 @@
 /servers/**/*
+!directory_keeper.txt
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
