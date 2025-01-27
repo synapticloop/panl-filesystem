@@ -1,9 +1,10 @@
 plugins {
 	id 'java'
+	id 'application'
 }
 
 group = 'com.synapticloop'
-version = '1.0-0'
+version = '1.0.0'
 
 repositories {
 	mavenCentral()
@@ -13,4 +14,7 @@ dependencies {
 	implementation 'org.apache.solr:solr-solrj:9.6.1'
 	implementation 'org.apache.tika:tika-core:3.0.0'
 	implementation 'org.apache.tika:tika-parsers:3.0.0'
+	implementation 'org.apache.tika:tika-parsers-standard-package:3.0.0'
+	implementation 'commons-io:commons-io:2.16.1'
 }
+
