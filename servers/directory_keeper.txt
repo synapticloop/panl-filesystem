@@ -1,2 +1,3 @@
-THis file is here to ensure that the ./servers directory gets committed to git
+This file is here to ensure that the ./servers directory gets committed to git
+This file is here to ensure that the ./servers directory gets committed to git
 to preserve the project structure for the book walkthrough example.
