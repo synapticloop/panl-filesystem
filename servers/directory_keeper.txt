@@ -1,2 +1,2 @@
 THis file is here to ensure that the ./servers directory gets committed to git
-to preserver the project structure for the book walkthrough example.
+to preserve the project structure for the book walkthrough example.
