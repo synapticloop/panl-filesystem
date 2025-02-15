@@ -116,6 +116,7 @@
 
   <field name="filename" type="string" indexed="true" stored="true" multiValued="false" />
   <field name="filetype" type="string" indexed="true" stored="true" multiValued="false" />
+  <field name="filesize" type="string" indexed="true" stored="true" multiValued="false" />
   <field name="category" type="string" indexed="true" stored="true" multiValued="true" />
   <field name="contents" type="text_general" indexed="true" stored="true" multiValued="true" />
 

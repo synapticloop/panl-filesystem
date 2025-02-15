@@ -66,8 +66,8 @@ public class Main {
 
 	/**
 	 * <p>This does the heavy lifting of indexing the documents with Apache Tika,
-	 * then connecting to the Solr server to add the contents of the document and metadata to the search collection
-	 * index.</p>
+	 * then connecting to the Solr server to add the contents of the document and
+	 * metadata to the search collection index.</p>
 	 *
 	 * @param baseDir The base directory for starting the search indexing
 	 * @param listFile The file to be indexed
@@ -112,6 +112,11 @@ public class Main {
 			doc.addField("id", id);
 			doc.addField("filename", fileName);
 			doc.addField("filetype", fileType);
+
+			// now for the filesize
+
+			doc.addField("filesize", getFileSize(listFile.length()));
+
 			doc.addField("contents", contents);
 			doc.addField("category", categories);
 
@@ -138,5 +143,27 @@ public class Main {
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	private static String getFileSize(long length) {
+		if (length <= 0) return "0 Bytes";
+
+		String[] units = new String[]{"Bytes", "KB", "MB", "GB", "TB"};
+		int unitIndex = 0;
+
+		double fileSize = (double) length;
+
+		while (fileSize >= 1024 && unitIndex < units.length - 1) {
+			fileSize /= 1024;
+			unitIndex++;
+		}
+
+		return String.format(
+				"%d %s",
+				roundUpToNearest500(fileSize), units[unitIndex]);
+	}
+
+	public static int roundUpToNearest500(double value) {
+		return (int) (Math.ceil(value / 500) * 500);
 	}
 }
