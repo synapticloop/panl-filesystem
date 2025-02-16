@@ -18,6 +18,10 @@ dependencies {
 	implementation 'commons-io:commons-io:2.16.1'
 }
 
+startScripts {
+	classpath = files( '$APP_HOME/lib/*' )
+}
+
 application {
 	mainClass = 'com.synapticloop.Main'
 }
